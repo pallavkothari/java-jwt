@@ -26,14 +26,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .loginPage("/")
                     .permitAll()
                     .and()
-                .logout()
-                    .logoutUrl("/logout")
-                    .logoutSuccessUrl("/")
-                    .invalidateHttpSession(true)
-                    .deleteCookies(TokenAuthenticationService.COOKIE_NAME)
-                    .permitAll()
-                    .and()
-                    // And filter other requests to check the presence of JWT
+                // And filter other requests to check the presence of JWT
                 .addFilterBefore(new JWTAuthenticationFilter(),
                             UsernamePasswordAuthenticationFilter.class);
     }
