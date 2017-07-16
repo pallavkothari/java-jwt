@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jwt</title>
+</head>
+<body>
+Hello {{ userInfo }} !
+<div>
+
+    {{ #userInfo.valid }}
+        logged in! cheers, {{ userInfo.username }}
+    {{ /userInfo.valid }}
+
+    {{ ^userInfo.valid }}
+        not logged in :( <br/>
+        <a href={{fbLoginLink}}>
+            Login with Facebook
+        </a>
+
+    {{ /userInfo.valid }}
+
+
+</div>
+</body>
+</html>
