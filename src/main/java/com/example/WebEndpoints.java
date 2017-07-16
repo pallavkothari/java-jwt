@@ -27,9 +27,4 @@ public class WebEndpoints {
                 TokenAuthenticationService.LOGIN_SERVICE,
                 UrlEscapers.urlPathSegmentEscaper().escape(req.getRequestURL().toString()));
     }
-
-    @GetMapping("/login")
-    public String login() {
-        return "index";
-    }
 }
