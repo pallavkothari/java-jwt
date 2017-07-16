@@ -19,7 +19,14 @@ public class WebEndpoints {
     public String index(HttpServletRequest req, Map<String, Object> model) {
         model.put("userInfo", UserContext.get().getUserInfo());
         model.put("fbLoginLink", makeFbLoginLink(req));
+        model.put("logoutLink", makeLogoutLink(req));
         return "index";
+    }
+
+    private String makeLogoutLink(HttpServletRequest req) {
+        return String.format("%s/logout?success=%s",
+                TokenAuthenticationService.LOGIN_SERVICE,
+                UrlEscapers.urlPathSegmentEscaper().escape(req.getRequestURL().toString()));
     }
 
     private String makeFbLoginLink(HttpServletRequest req) {

@@ -9,7 +9,8 @@ Hello {{ userInfo }} !
 <div>
 
     {{ #userInfo.valid }}
-        logged in! cheers, {{ userInfo.username }}
+        logged in! cheers, {{ userInfo.username }} <br/>
+        <a href={{logoutLink}}> logout </a>
     {{ /userInfo.valid }}
 
     {{ ^userInfo.valid }}
