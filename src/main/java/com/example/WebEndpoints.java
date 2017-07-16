@@ -5,7 +5,6 @@ import com.example.security.UserContext;
 import com.google.common.net.UrlEscapers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
@@ -29,7 +28,7 @@ public class WebEndpoints {
                 UrlEscapers.urlPathSegmentEscaper().escape(req.getRequestURL().toString()));
     }
 
-    @PostMapping("/login")
+    @GetMapping("/login")
     public String login() {
         return "index";
     }
