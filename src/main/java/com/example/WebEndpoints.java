@@ -51,7 +51,7 @@ public class WebEndpoints {
     }
 
     enum Providers {
-        facebook, github
+        facebook, github, google
     }
 
     @Data @AllArgsConstructor

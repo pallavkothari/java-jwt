@@ -15,9 +15,9 @@ Call `UserContext.get().getUserInfo()` anywhere in the scope of a request to get
 
  
 ## Required environment vars: 
-- COOKIE_NAME: the name of the jwt cookie to parse for auth
-- COOKIE_SECRET: the HMAC key for the cookie
 - LOGIN_SERVICE_URL: your auth service (e.g. https://login.YOUR_DOMAIN.biz)
+- COOKIE_SECRET: the HMAC key for the cookie (must be exactly the same as what your auth service uses to issue the cookie)
+- COOKIE_NAME: the name of the jwt cookie to parse for auth
 
 ## Sample JWT 
 ```json

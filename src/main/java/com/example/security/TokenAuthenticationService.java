@@ -72,6 +72,7 @@ public class TokenAuthenticationService {
 
         UserContext.UserInfo info = null;
         try {
+            // TODO no real need to rely on the JWT payload; could just look at the 'profile' cookie directly which is just json!
             Claims body = (Claims) parsed.getBody();
             String accessToken = body.get(ACCESS_TOKEN, String.class);
             Map<String, String> profile = body.get("profile", Map.class);
