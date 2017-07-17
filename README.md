@@ -6,7 +6,7 @@ A tiny java app authenticating with a JWT. Everything but the home page requires
 
 Call `UserContext.get().getUserInfo()` anywhere in the scope of a request to get info about the current user (may be a sentinel object); call `userInfo.isValid()` to see if the user's logged in or not. 
 
-##Caveats: 
+## Caveats: 
 - UserContext should be torn down at the end of each request
 - This has been tested using `login-with`, so it expects a certain payload structure (see below)
 - Needs to be deployed to a subdomain of the domain protected by the `login-with` server
@@ -14,7 +14,7 @@ Call `UserContext.get().getUserInfo()` anywhere in the scope of a request to get
 - Heroku terminates SSL at the router, but correctly injects the standard HTTP proxy [headers](https://devcenter.heroku.com/articles/http-routing#heroku-headers)  so for this to work you need to ensure your server "trusts" the heroku proxy. Spring boot _just works_. If you use the code in this example but deploy on a different server, YMMV. 
 
  
-##Required environment vars: 
+## Required environment vars: 
 - COOKIE_NAME: the name of the jwt cookie to parse for auth
 - COOKIE_SECRET: the HMAC key for the cookie
 - LOGIN_SERVICE_URL: your auth service (e.g. https://login.YOUR_DOMAIN.biz)
