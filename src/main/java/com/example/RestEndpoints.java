@@ -5,11 +5,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * dummy data, meh.
+ *
+ * Everything in here will require authentication.
+ *
  * Created by pallav.kothari on 7/15/17.
  */
 @RestController
-public class UserController {
+public class RestEndpoints {
 
     @RequestMapping("/users")
     public @ResponseBody String getUsers() {

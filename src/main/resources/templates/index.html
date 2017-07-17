@@ -15,11 +15,11 @@
 
     {{ ^userInfo.valid }}
         not logged in :( <br/>
-        <a href={{fbLoginLink}}>
-            Login with Facebook
-        </a>
-    {{ /userInfo.valid }}
 
+        {{#loginLinks}}
+            <a href={{link}}>Login with {{provider}}</a>
+        {{/loginLinks}}
+    {{ /userInfo.valid }}
 
 </div>
 </body>

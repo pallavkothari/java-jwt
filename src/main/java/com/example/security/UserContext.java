@@ -4,6 +4,8 @@ import lombok.Builder;
 import lombok.Data;
 
 /**
+ * Holds thread-local user info; code elsewhere can check the `valid` flag to decide if the user has been auth'd.
+ * Ought to be cleaned up in a finally block -- see {@link JWTAuthenticationFilter}
  * Created by pallav.kothari on 7/16/17.
  */
 public enum UserContext {
@@ -26,7 +28,7 @@ public enum UserContext {
     @Data
     @Builder
     public static final class UserInfo {
-        private String username, provider, name, photo, accessToken;
+        private String username, provider, name, photo, accessToken, id;
         private boolean valid;
     }
 }

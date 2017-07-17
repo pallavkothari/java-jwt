@@ -1,0 +1,24 @@
+{
+  "name": "jwt",
+  "scripts": {
+  },
+  "env": {
+    "COOKIE_NAME": {
+      "required": true
+    },
+    "COOKIE_SECRET": {
+      "required": true
+    },
+    "LOGIN_SERVICE_URL": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
