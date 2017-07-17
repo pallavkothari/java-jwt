@@ -10,6 +10,7 @@
 
     {{ #userInfo.valid }}
         Aloha, {{ userInfo.username }}! <br/>
+        <img src={{ userInfo.photo }} /> <br/>
         <a href={{logoutLink}}> logout </a>
     {{ /userInfo.valid }}
 
